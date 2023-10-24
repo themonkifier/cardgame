@@ -17,6 +17,8 @@
 #include "include/shader.hh"
 #include "include/card.hh"
 
+constexpr unsigned int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 600, CARD_WIDTH = 140, CARD_HEIGHT = 190;
+
 /**
  * @return current window
  */
@@ -25,7 +27,7 @@ GLFWwindow* setup_window();
 /**
  * @brief initialize project setting (vertex array, vertex buffer, element buffer)
 */
-void setup_project(unsigned int &VAO, unsigned int &VBO, unsigned int &EBO);
+void setup_project(unsigned int &VAO, unsigned int &VBO, unsigned int &EBO, unsigned int &texture);
 
 /**
  * @brief main gameplay loop, so that destructors can be called before the window is closed
@@ -40,6 +42,6 @@ void run(GLFWwindow* window);
   */
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
-void processInput(GLFWwindow* window);
+int processInput(GLFWwindow* window);
 
 #endif
