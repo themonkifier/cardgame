@@ -1,148 +1,129 @@
 #include "../include/shader.hh"
 
-Shader::Shader(const char* vertexPath, const char* fragmentPath)
+#include <iostream>
+
+Shader &Shader::Use()
 {
-    /* open files */
-    FILE* vertexFile;
-    FILE* fragmentFile;
-    
-    if ((vertexFile = fopen(vertexPath, "r")) == NULL)
+    glUseProgram(this->ID);
+    return *this;
+}
+
+void Shader::Compile(const char* vertexSource, const char* fragmentSource, const char* geometrySource)
+{
+    unsigned int sVertex, sFragment, gShader;
+    // vertex Shader
+    sVertex = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(sVertex, 1, &vertexSource, NULL);
+    glCompileShader(sVertex);
+    checkCompileErrors(sVertex, "VERTEX");
+    // fragment Shader
+    sFragment = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(sFragment, 1, &fragmentSource, NULL);
+    glCompileShader(sFragment);
+    checkCompileErrors(sFragment, "FRAGMENT");
+    // if geometry shader source code is given, also compile geometry shader
+    if (geometrySource != nullptr)
     {
-        printf("Failed to open vertex shader\n");
-        return;
+        gShader = glCreateShader(GL_GEOMETRY_SHADER);
+        glShaderSource(gShader, 1, &geometrySource, NULL);
+        glCompileShader(gShader);
+        checkCompileErrors(gShader, "GEOMETRY");
     }
-    else if ((fragmentFile = fopen(fragmentPath, "r")) == NULL)
-    {
-        fclose(vertexFile);
-        printf("Failed to open fragmentation shader\n");
-        return;
-    }
-    
-    /* get length of files */
-    fseek(vertexFile, 0, SEEK_END);
-    long int vertexLength = ftell(vertexFile);
-    rewind(vertexFile);
-    
-    fseek(fragmentFile, 0, SEEK_END);
-    long int fragmentLength = ftell(fragmentFile);
-    rewind(fragmentFile);
-    
-    /* read files into buffers */
-    char* vertexCode = (char*) malloc((vertexLength + 1) * sizeof(char));
-    char* fragmentCode = (char*) malloc((fragmentLength + 1) * sizeof(char));
-        
-    fread((void*) vertexCode, sizeof(char), vertexLength, vertexFile);
-    vertexCode[vertexLength] = '\0';
-    fclose(vertexFile);
-    
-    fread((void*) fragmentCode, sizeof(char), fragmentLength, fragmentFile);
-    fragmentCode[fragmentLength] = '\0';
-    fclose(fragmentFile);
-    
-    /* setup shaders */
-    unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, (const char* const*) &vertexCode, NULL);
-    glCompileShader(vertexShader);
-    // check for shader compile errors
+    // shader program
+    this->ID = glCreateProgram();
+    glAttachShader(this->ID, sVertex);
+    glAttachShader(this->ID, sFragment);
+    if (geometrySource != nullptr)
+        glAttachShader(this->ID, gShader);
+    glLinkProgram(this->ID);
+    checkCompileErrors(this->ID, "PROGRAM");
+    // delete the shaders as they're linked into our program now and no longer necessary
+    glDeleteShader(sVertex);
+    glDeleteShader(sFragment);
+    if (geometrySource != nullptr)
+        glDeleteShader(gShader);
+}
+
+void Shader::SetFloat(const char *name, float value, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform1f(glGetUniformLocation(this->ID, name), value);
+}
+void Shader::SetInteger(const char *name, int value, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform1i(glGetUniformLocation(this->ID, name), value);
+}
+void Shader::SetVector2(const char *name, float x, float y, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform2f(glGetUniformLocation(this->ID, name), x, y);
+}
+void Shader::SetVector2(const char *name, const glm::vec2 &value, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform2f(glGetUniformLocation(this->ID, name), value.x, value.y);
+}
+void Shader::SetVector3(const char *name, float x, float y, float z, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform3f(glGetUniformLocation(this->ID, name), x, y, z);
+}
+void Shader::SetVector3(const char *name, const glm::vec3 &value, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform3f(glGetUniformLocation(this->ID, name), value.x, value.y, value.z);
+}
+void Shader::SetVector4(const char *name, float x, float y, float z, float w, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform4f(glGetUniformLocation(this->ID, name), x, y, z, w);
+}
+void Shader::SetVector4(const char *name, const glm::vec4 &value, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniform4f(glGetUniformLocation(this->ID, name), value.x, value.y, value.z, value.w);
+}
+void Shader::SetMatrix4(const char *name, const glm::mat4 &matrix, bool useShader)
+{
+    if (useShader)
+        this->Use();
+    glUniformMatrix4fv(glGetUniformLocation(this->ID, name), 1, false, glm::value_ptr(matrix));
+}
+
+
+void Shader::checkCompileErrors(unsigned int object, std::string type)
+{
     int success;
-    char infoLog[512];
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if (!success)
+    char infoLog[1024];
+    if (type != "PROGRAM")
     {
-        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        printf("Failed to compile vertex shader\n%s\n", infoLog);
+        glGetShaderiv(object, GL_COMPILE_STATUS, &success);
+        if (!success)
+        {
+            glGetShaderInfoLog(object, 1024, NULL, infoLog);
+            std::cout << "ERROR::SHADER: Compile-time error: Type: " << type << "\n"
+                << infoLog << "\n -- --------------------------------------------------- -- "
+                << std::endl;
+        }
     }
-    free(vertexCode);
-    
-    /* fragment shader */
-    unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, (const char* const*) &fragmentCode, NULL);
-    glCompileShader(fragmentShader);
-    // check for shader compile errors
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success)
+    else
     {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        printf("Failed to compile fragmentation shader\n%s\n", infoLog);
+        glGetProgramiv(object, GL_LINK_STATUS, &success);
+        if (!success)
+        {
+            glGetProgramInfoLog(object, 1024, NULL, infoLog);
+            std::cout << "ERROR::Shader: Link-time error: Type: " << type << "\n"
+                << infoLog << "\n -- --------------------------------------------------- -- "
+                << std::endl;
+        }
     }
-    free(fragmentCode);
-    
-    /* link shaders */
-    ID = glCreateProgram();
-    glAttachShader(ID, vertexShader);
-    glAttachShader(ID, fragmentShader);
-    glLinkProgram(ID);
-    // check for linking errors
-    glGetProgramiv(ID, GL_LINK_STATUS, &success);
-    if (!success) {
-        glGetProgramInfoLog(ID, 512, NULL, infoLog);
-        printf("Failed to link shader program\n%s\n", infoLog);
-    }
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-}
-
-Shader::~Shader()
-{
-    glDeleteProgram(ID);
-}
-
-void Shader::use()
-{
-    glUseProgram(ID);
-}
-
-
-void Shader::set_int(const char* name, int value)
-{
-    glUniform1i(glGetUniformLocation(ID, name), value);
-}
-
-void Shader::set_float(const char* name, float value)
-{
-    glUniform1f(glGetUniformLocation(ID, name), value);
-}
-
-void Shader::set_bool(const char* name, bool value)
-{
-    glUniform1i(glGetUniformLocation(ID, name), (int) value);
-}
-// ------------------------------------------------------------------------
-void Shader::setVec2(const char* name, const glm::vec2 &value) const
-{ 
-    glUniform2fv(glGetUniformLocation(ID, name), 1, &value[0]); 
-}
-
-void Shader::setVec2(const char* name, float x, float y) const
-{ 
-    glUniform2f(glGetUniformLocation(ID, name), x, y); 
-}
-// ------------------------------------------------------------------------
-void Shader::setVec3(const char* name, const glm::vec3 &value) const
-{ 
-    glUniform3fv(glGetUniformLocation(ID, name), 1, &value[0]); 
-}
-
-void Shader::setVec3(const char* name, float x, float y, float z) const
-{ 
-    glUniform3f(glGetUniformLocation(ID, name), x, y, z); 
-}
-// ------------------------------------------------------------------------
-void Shader::setVec4(const char* name, const glm::vec4 &value) const
-{ 
-    glUniform4fv(glGetUniformLocation(ID, name), 1, &value[0]); 
-}
-void Shader::setVec4(const char* name, float x, float y, float z, float w) const
-{ 
-    glUniform4f(glGetUniformLocation(ID, name), x, y, z, w); 
-}
-// ------------------------------------------------------------------------
-void Shader::setMat3(const char* name, const glm::mat3 &mat) const
-{
-    glUniformMatrix3fv(glGetUniformLocation(ID, name), 1, GL_FALSE, &mat[0][0]);
-}
-// ------------------------------------------------------------------------
-void Shader::setMat4(const char* name, const glm::mat4 &mat) const
-{
-    glUniformMatrix4fv(glGetUniformLocation(ID, name), 1, GL_FALSE, &mat[0][0]);
 }
