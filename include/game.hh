@@ -3,6 +3,12 @@
 
 #include "resource_manager.hh"
 #include "renderer.hh"
+#include "deck.hh"
+
+#include <string>
+#include <unordered_map>
+
+extern const unsigned int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 class Game
 {
@@ -12,10 +18,12 @@ public:
         GAME_ACTIVE,
         GAME_MENU,
         GAME_WIN
-    };
-    // game state
-    GameState    State;
-    bool         Keys[1024];
+    } State;
+    std::vector<bool> Keys;
+
+    // isPressed, xpos, ypos
+    std::vector<std::pair<bool, std::pair<double, double> > > MouseInput;
+
     unsigned int Width, Height;
     // constructor/destructor
     Game(unsigned int width, unsigned int height);
@@ -26,6 +34,7 @@ public:
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
+    bool isClicked(std::shared_ptr<Card> card, glm::vec2* position);
 };
 
 #endif

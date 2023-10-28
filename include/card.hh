@@ -1,9 +1,12 @@
 #ifndef CARD_HH
 #define CARD_HH
 
+#include <string>
 #include <memory>
 
 #include "shader.hh"
+#include "texture.hh"
+#include "resource_manager.hh"
 
 #include <glad/glad.h>
 
@@ -14,21 +17,34 @@
 class Card
 {
 public:
-    unsigned int x, y; // position in spritesheet
-    unsigned int width, height; // texture size
+    struct CardInfo
+    {
+        std::string suit;
+        std::string rank;
+        int value;
+
+        bool operator==(const CardInfo& ci) const noexcept;
+        CardInfo(std::string suit, std::string rank, int value);
+        CardInfo();
+    } cardInfo;
+    bool isClicked;
+    bool isDraggable;
+    glm::vec2 size; // texture size
     glm::vec2 position; // position in space
+    glm::vec3 tint; // display tint
     float angle; // rotation angle
     glm::mat4 translation; // overall translation
 
-    Shader* shader; // card shader being used
+    Texture texture;
 
-    Card(unsigned const int x, unsigned const int y, unsigned const int width, unsigned const int height, Shader* shader);
-    ~Card();
+    Card(Texture texture, CardInfo cardInfo, glm::vec3 tint = glm::vec3(1.0f, 1.0f, 1.0f));
+    Card(CardInfo cardInfo, bool alpha, glm::vec3 tint = glm::vec3(1.0f, 1.0f, 1.0f));
+    bool operator==(const Card& c) const noexcept;
 
     /**
-      * @brief display the card on the screen
+      * @brief update the translation for display on the screen
       */
-    void show();
+    void updateTranslation();
 
     /**
       * @brief rotate by the given angle (in radians)
@@ -52,6 +68,16 @@ public:
       * @brief move to an absolute location
       */
     void move(glm::vec2 newPosition);
+
+    /**
+      * @brief action to perform when clicked on
+      */
+    void onClick(glm::vec2 position);
+
+    /**
+      * @brief action to preform when clicked and held on
+      */
+    void onHold(glm::vec2 position);
 private:
     static const glm::mat4 identity; // identity matrix... does this stop additional copies from being made?
 };
