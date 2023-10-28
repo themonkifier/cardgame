@@ -38,6 +38,33 @@ void Renderer::DrawSprite(Texture& texture, glm::vec2 position, glm::vec2 size, 
     glBindVertexArray(0);
 }
 
+void Renderer::DrawCard(std::shared_ptr<Card> card)
+{
+    // prepare transformations
+    this->shader.Use();
+    card->updateTranslation();
+
+    this->shader.SetMatrix4("model", card->translation);
+
+    // render textured quad
+    this->shader.SetVector3("spriteColor", card->tint);
+
+    glActiveTexture(GL_TEXTURE0);
+    card->texture.Bind();
+
+    glBindVertexArray(this->quadVAO);
+    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glBindVertexArray(0);
+}
+
+void Renderer::DrawDeck(std::shared_ptr<Deck> deck)
+{
+    for (std::shared_ptr<Card> card : deck->cards)
+    {
+        DrawCard(card);
+    }
+}
+
 void Renderer::initRenderData()
 {
     // configure VAO/VBO

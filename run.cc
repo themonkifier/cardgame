@@ -1,19 +1,9 @@
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-
-#include "include/game.hh"
-#include "include/resource_manager.hh"
-
-#include <iostream>
-
-// GLFW function declarations
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
+#include "run.hh"
 
 // The Width of the screen
-const unsigned int SCREEN_WIDTH = 1600/2;
+const unsigned int SCREEN_WIDTH = 1600;
 // The height of the screen
-const unsigned int SCREEN_HEIGHT = 1200/2;
+const unsigned int SCREEN_HEIGHT = 1200;
 
 Game* CardGame = new Game(SCREEN_WIDTH, SCREEN_HEIGHT);
 
@@ -23,10 +13,10 @@ int main(int argc, char *argv[])
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-#ifdef __APPLE__
+    #ifdef __APPLE__
       glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-#endif
-    glfwWindowHint(GLFW_RESIZABLE, false);
+    #endif
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
     GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Card Game Test", nullptr, nullptr);
     glfwMakeContextCurrent(window);
@@ -40,6 +30,7 @@ int main(int argc, char *argv[])
     }
 
     glfwSetKeyCallback(window, key_callback);
+    glfwSetMouseButtonCallback(window, mouse_callback);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     // OpenGL configuration
@@ -74,6 +65,9 @@ int main(int argc, char *argv[])
         // update game state
         // -----------------
         CardGame->Update(deltaTime);
+        if (CardGame->MouseInput[0].first) glfwGetCursorPos(window,
+                                            &(CardGame->MouseInput[0].second.first), // set xpos
+                                            &(CardGame->MouseInput[0].second.second));// set ypos)
 
         // render
         // ------
@@ -91,6 +85,15 @@ int main(int argc, char *argv[])
 
     glfwTerminate();
     return 0;
+}
+
+void mouse_callback(GLFWwindow* window, int button, int state, int mods)
+{
+    CardGame->MouseInput[button].first = state; // set isPressed
+
+    glfwGetCursorPos(window,
+        &(CardGame->MouseInput[button].second.first), // set xpos
+        &(CardGame->MouseInput[button].second.second));// set ypos
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
@@ -113,4 +116,3 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }
-
