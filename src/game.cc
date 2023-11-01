@@ -3,13 +3,12 @@
 
 // Game-related State data
 Renderer* renderer;
-std::vector<std::shared_ptr<Card>> cards;
-std::unordered_map<std::string, std::unique_ptr<Deck>> decks;
+std::unordered_map<std::string, std::shared_ptr<Pile> > piles;
+std::unordered_map<std::string, std::shared_ptr<Deck> > decks;
 
 Game::Game(unsigned int width, unsigned int height)
     : State(GameState::GAME_ACTIVE), Keys(), MouseInput(), Width(width), Height(height)
-{
-}
+{}
 
 Game::~Game()
 {
@@ -40,44 +39,62 @@ void Game::Init()
     {"6", 6}, {"7", 7}, {"8", 8}, {"9", 9},
     {"10", 10}, {"J", 11}, {"Q", 12}, {"K", 13}};
 
-    decks.emplace("draw", std::make_unique<Deck>(suits, cardRanksAndValues));
-    decks.emplace("discard", std::make_unique<Deck>(suits, cardRanksAndValues, true));
-    decks.emplace("hand", std::make_unique<Deck>(suits, cardRanksAndValues, true));
+    decks.emplace("cards", std::make_shared<Deck>(suits, cardRanksAndValues));
+
+    std::shared_ptr<Pile> draw = std::make_shared<Pile>(decks["cards"]);
+    draw->fillFromDeck();
+    std::shared_ptr<Pile> discard = std::make_shared<Pile>(decks["cards"]);
+    std::shared_ptr<Pile> visible = std::make_shared<Pile>(decks["cards"]);
+    std::shared_ptr<Pile> hand = std::make_shared<Pile>(decks["hand"]);
+    piles.emplace("draw", draw);
+    piles.emplace("discard", discard);
+    piles.emplace("visible", visible);
+    piles.emplace("hand", hand);
 
     // pick random card
-    decks["draw"]->shuffle();
-    decks["draw"]->shuffle();
-    std::shared_ptr<Card> testCard = decks["draw"]->dealToFront(std::move(decks["discard"]));
-    cards.push_back(testCard);
-    testCard->move(glm::vec2(800, 800));
+    piles["draw"]->shuffle();
+    piles["draw"]->shuffle();
+    for (int i = 0; i < 5; i++)
+    {
+        GameObject& testCard = piles["draw"]->move(piles["visible"]);
+        testCard.texture.move(glm::vec2(15 * i, 10 * i));
+    }
 }
 
 void Game::Update(float dt)
 {
+    /* if left mouse isn't pressed, make sure every texture knows this*/
     if (!MouseInput[0].first)
     {
-        for (std::shared_ptr<Card> card : cards)
+        for (GameObject& card : *piles["visible"])
         {
-            card->isClicked = false;
+            card.texture.isClicked = false;
         }
     }
 }
 
 void Game::ProcessInput(float dt)
 {
-    // if (MouseInput[0].first) std::cout << "left mouse\n";
-    // if (MouseInput[1].second) std::cout << "right mouse\n";
-
-    glm::vec2 position;
     if (MouseInput[0].first)
     {
-        for (std::shared_ptr card : cards)
+        for (GameObject& card : *piles["visible"])
         {
-            if (isClicked(card, &position))
+            if (card.texture.contains(MouseInput[0].second, card.texture.isClicked)
+            &&  onTop(card.texture, *piles["visible"], MouseInput[0].second))
             {
-                std::cout << position.x << " " << position.y << "\n";
-                if (card->isClicked) card->onHold(position - card->position);
-                else if (card->isDraggable) card->onClick(position - card->position);
+                if (card.texture.isClicked)
+                {
+                    card.texture.onHold(glm::vec2(MouseInput[0].second.first,
+                        MouseInput[0].second.second) - card.texture.position - card.texture.lastClickPos);
+                }
+                else if (card.texture.isDraggable)
+                {
+                    glm::vec2 position(MouseInput[0].second.first - card.texture.position.x,
+                        MouseInput[0].second.second - card.texture.position.y);
+                    card.texture.onClick(position);
+                    card.texture.lastClickPos = position;
+                    piles["visible"]->sort();
+                }
             }
         }
     }
@@ -85,15 +102,15 @@ void Game::ProcessInput(float dt)
 
 void Game::Render()
 {
-    renderer->DrawCard(cards.at(0));
+    renderer->DrawPile(*piles["visible"]);
 }
 
-bool Game::isClicked(std::shared_ptr<Card> card, glm::vec2* position)
+bool Game::onTop(Texture& texture, Pile& pile, std::pair<double, double>& clickPosition)
 {
-    position->x = MouseInput[0].second.first;
-    position->y = MouseInput[0].second.second;
-    
-    if ((position->x + 50 >= card->position.x && position->x <= card->position.x + card->size.x)
-     && (position->y + 50 >= card->position.y && position->y <= card->position.y + card->size.y)) return true;
-    return false;
+    // i don't really like this method - how can we not look at everything? i don't want to store too much but this seems worse
+    for (GameObject& gameobject : pile)
+    {
+        if (texture.contains(clickPosition) && gameobject.texture.contains(clickPosition) && gameobject.texture.zlevel > texture.zlevel) return false;
+    }
+    return true;
 }

@@ -9,7 +9,8 @@ Renderer::Renderer(Shader shader)
 
 Renderer::~Renderer()
 {
-    glDeleteVertexArrays(1, &this->quadVAO);
+    if (this != nullptr)
+        glDeleteVertexArrays(1, &this->quadVAO);
 }
 
 void Renderer::DrawSprite(Texture& texture, glm::vec2 position, glm::vec2 size, float rotate, glm::vec3 color)
@@ -38,30 +39,30 @@ void Renderer::DrawSprite(Texture& texture, glm::vec2 position, glm::vec2 size, 
     glBindVertexArray(0);
 }
 
-void Renderer::DrawCard(std::shared_ptr<Card> card)
+void Renderer::DrawTexture(Texture texture)
 {
     // prepare transformations
     this->shader.Use();
-    card->updateTranslation();
+    texture.updateTranslation();
 
-    this->shader.SetMatrix4("model", card->translation);
+    this->shader.SetMatrix4("model", texture.translation);
 
     // render textured quad
-    this->shader.SetVector3("spriteColor", card->tint);
+    this->shader.SetVector3("spriteColor", texture.tint);
 
     glActiveTexture(GL_TEXTURE0);
-    card->texture.Bind();
+    texture.Bind();
 
     glBindVertexArray(this->quadVAO);
     glDrawArrays(GL_TRIANGLES, 0, 6);
     glBindVertexArray(0);
 }
 
-void Renderer::DrawDeck(std::shared_ptr<Deck> deck)
+void Renderer::DrawPile(Pile pile)
 {
-    for (std::shared_ptr<Card> card : deck->cards)
+    for (auto it = pile.begin(); it != pile.end(); it++)
     {
-        DrawCard(card);
+        DrawTexture(it->texture);
     }
 }
 

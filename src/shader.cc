@@ -127,3 +127,8 @@ void Shader::checkCompileErrors(unsigned int object, std::string type)
         }
     }
 }
+
+std::size_t Shader::operator()(const Shader& s) const noexcept
+{
+    return 67134851221 * s.ID % 46192549927 + 65697490589;
+}
