@@ -21,7 +21,7 @@ public:
     } State;
     std::vector<bool> Keys;
 
-    // isPressed, xpos, ypos
+    // isPressed, (xpos, ypos)
     std::vector<std::pair<bool, std::pair<double, double> > > MouseInput;
 
     unsigned int Width, Height;
@@ -34,7 +34,9 @@ public:
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
-    bool isClicked(std::shared_ptr<Card> card, glm::vec2* position);
+    
+    bool isClicked(Texture& texture, glm::vec2& clickPosition);
+    bool onTop(Texture& texture, Pile& pile, std::pair<double, double>& clickPosition);
 };
 
 #endif

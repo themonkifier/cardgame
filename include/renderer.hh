@@ -8,7 +8,7 @@
 #include "texture.hh"
 #include "shader.hh"
 #include "card.hh"
-#include "deck.hh"
+#include "pile.hh"
 
 class Renderer
 {
@@ -19,8 +19,8 @@ public:
     ~Renderer();
     // Renders a defined quad textured with given sprite
     void DrawSprite(Texture& texture, glm::vec2 position, glm::vec2 size = glm::vec2(10.0f, 10.0f), float rotate = 0.0f, glm::vec3 color = glm::vec3(1.0f));
-    void DrawCard(std::shared_ptr<Card> card);
-    void DrawDeck(std::shared_ptr<Deck> deck);
+    void DrawTexture(Texture texture);
+    void DrawPile(Pile pile);
 private:
     // Render state
     Shader shader;

@@ -17,8 +17,10 @@ public:
     // state
     unsigned int ID; 
     // constructor
-    Shader()
-    {}
+    Shader() {}
+
+    std::size_t operator()(const Shader& s) const noexcept;
+
     // sets the current shader as active
     Shader& Use();
     // compiles the shader from given source code
@@ -36,6 +38,14 @@ public:
 private:
     // checks if compilation or linking failed and if so, print the error logs
     void    checkCompileErrors(unsigned int object, std::string type); 
+};
+
+template<> struct std::hash<Shader>
+{
+    std::size_t operator()(const Shader& s) const noexcept
+    {
+        return 67134851221 * s.ID % 46192549927 + 65697490589;
+    }
 };
 
 #endif
