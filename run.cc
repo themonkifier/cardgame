@@ -1,15 +1,14 @@
 #include "run.hh"
 
-// The Width of the screen
-const unsigned int SCREEN_WIDTH = 1600;
-// The height of the screen
-const unsigned int SCREEN_HEIGHT = 1200;
+unsigned int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 600, NUM_PLAYERS;
 
 Game* CardGame = new Game(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-int main(int argc, char *argv[])
-{
-    glfwInit();
+int main(int argc, char *argv[]) {
+    if (!glfwInit()) {
+        std::cout << "Failed to initialize GLFW" << std::endl;
+        exit(EXIT_FAILURE);
+    }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -18,31 +17,41 @@ int main(int argc, char *argv[])
     #endif
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
+    // const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+
+    // SCREEN_WIDTH = 800; // mode->width;
+    // SCREEN_HEIGHT = 600; // mode->height;
+
     GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Card Game Test", nullptr, nullptr);
     glfwMakeContextCurrent(window);
 
-    // glad: load all OpenGL function pointers
-    // ---------------------------------------
-    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
-
     glfwSetKeyCallback(window, key_callback);
+    glfwSetCharCallback(window, character_callback);
     glfwSetMouseButtonCallback(window, mouse_callback);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+    // glad: load all OpenGL function pointers
+    // ---------------------------------------
+    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     // OpenGL configuration
     // --------------------
     glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    glEnable(GL_CULL_FACE);
     glEnable(GL_BLEND);
-    // glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+    glEnable(GL_TEXTURE_2D);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
     // initialize game
     // ---------------
-    CardGame->Init();
+    // this is hardcoded now, but we'll have to (somehow) call
+    // it from within the game loop when creating the game ...
+    NUM_PLAYERS = 3;
+    CardGame->InitMenu();
 
     // deltaTime variables
     // -------------------
@@ -71,8 +80,21 @@ int main(int argc, char *argv[])
 
         // render
         // ------
-        glClearColor(0.666f, 0.770f, 0.950f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        switch (CardGame->State) {
+            case Game::GameState::MENU:
+            glClearColor(0.133, 0.125, 0.141, 1.0f);
+            break;
+            
+            case Game::GameState::WIN:
+            glClearColor(0.196f, 0.659f, 0.322f, 1.0f);
+            break;
+            
+            case Game::GameState::ACTIVE:
+            glClearColor(0.666f, 0.770f, 0.950f, 1.0f);
+            break;
+        }
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        
         CardGame->Render();
 
         glfwSwapBuffers(window);
@@ -84,11 +106,10 @@ int main(int argc, char *argv[])
     delete CardGame;
 
     glfwTerminate();
-    return 0;
+    exit(EXIT_SUCCESS);
 }
 
-void mouse_callback(GLFWwindow* window, int button, int state, int mods)
-{
+void mouse_callback(GLFWwindow* window, int button, int state, int mods) {
     CardGame->MouseInput[button].first = state; // set isPressed
 
     glfwGetCursorPos(window,
@@ -96,12 +117,11 @@ void mouse_callback(GLFWwindow* window, int button, int state, int mods)
         &(CardGame->MouseInput[button].second.second));// set ypos
 }
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
-{
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
     // when a user presses the escape key, we set the WindowShouldClose property to true, closing the application
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
-    if (key >= 0 && key < 1024)
+    else if (key >= 0 && key < 1024)
     {
         if (action == GLFW_PRESS)
             CardGame->Keys[key] = true;
@@ -110,9 +130,14 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     }
 }
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
+void character_callback(GLFWwindow* window, unsigned int codepoint) {
+    ;
+}
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     // make sure the viewport matches the new window dimensions; note that width and 
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
+    SCREEN_WIDTH = width;
+    SCREEN_HEIGHT = height;
 }
