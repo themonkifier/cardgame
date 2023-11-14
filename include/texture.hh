@@ -6,6 +6,8 @@
 
 #include <glad/glad.h>
 
+#include <GLFW/glfw3.h>
+
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
@@ -23,11 +25,15 @@ public:
     unsigned int zlevel;
     static unsigned int globalzlevel;
     
+    unsigned int clicks;
+
     bool isClicked;
     bool isDraggable;
+
     glm::vec2 size; // texture size
     glm::vec2 position; // position in space
     glm::vec2 lastClickPos;
+    double lastClickTime;
     glm::vec3 tint; // display tint
     float angle; // rotation angle
     glm::mat4 translation; // overall translation
@@ -66,9 +72,15 @@ public:
     void move(glm::vec2 newPosition);
 
     /**
-      * @brief action to perform when clicked on
+      * @brief resizes by a given factor
       */
-    void onClick(glm::vec2 position);
+    void resize(glm::vec2 factor);
+
+    /**
+      * @brief action to perform when clicked on
+      * @return true when the click was a double click, false otherwise
+      */
+    bool onClick(glm::vec2 position);
 
     /**
       * @brief action to preform when clicked and held on
@@ -81,7 +93,7 @@ public:
 private:
     static const glm::mat4 identity; // identity matrix - does this stop additional copies from being made?
     static constexpr unsigned int CLOSE_ENOUGH_CLICK = 5; // define how many pixels is "close enough" to the card - without this, clicking and dragging won't feel as smooth since you'll sometimes "drop" the card
-    static constexpr unsigned int CLOSE_ENOUGH_DRAG = 50; // define how many pixels is "close enough" to the card - without this, clicking and dragging won't feel as smooth since you'll sometimes "drop" the card
+    static constexpr unsigned int CLOSE_ENOUGH_DRAG = 100; // define how many pixels is "close enough" to the card - without this, clicking and dragging won't feel as smooth since you'll sometimes "drop" the card
 };
 
 template<> struct std::hash<Texture>

@@ -14,6 +14,11 @@ class Card : public GameObject
 public:
     // Card(ObjectInfo cardInfo, bool alpha, glm::vec3 tint = glm::vec3(1.0f, 1.0f, 1.0f));
     bool operator==(const Card& c) const noexcept;
+    void flipOver();
+
+    Texture back;
+
+    Card(ObjectInfo objectInfo, bool alpha, Texture& back);
 };
 
 #endif

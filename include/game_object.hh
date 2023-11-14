@@ -1,6 +1,7 @@
 #ifndef GAME_OBJECT_HH
 #define GAME_OBJECT_HH
 
+#include <iostream>
 #include <string>
 #include <memory>
 
@@ -19,9 +20,15 @@ public:
         bool operator==(const ObjectInfo& oi) const noexcept;
         ObjectInfo(std::string suit, std::pair<std::string, int> value);
         ObjectInfo();
+        friend std::ostream& operator<<(std::ostream& os, const GameObject::ObjectInfo& oi) {
+            os << oi.value.first << " of " << oi.variation << " (" << oi.value.second << ")";
+            return os;
+        }
     } objectInfo;
 
     Texture texture;
+
+    void flipOver();
 
     GameObject(ObjectInfo objectInfo, bool alpha);
     bool operator==(const GameObject& c) const noexcept;
