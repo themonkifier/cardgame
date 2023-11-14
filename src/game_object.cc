@@ -38,3 +38,8 @@ std::size_t GameObject::operator()(const GameObject& gameobject) const noexcept
 {
     return 10665624317 * std::hash<std::string>{}(gameobject.objectInfo.variation) % 46995126991 + 86166321749;
 }
+
+void GameObject::flipOver()
+{
+    std::cout << "why is GameObject::flipOver() being called?" << std::endl;
+}

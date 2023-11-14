@@ -1,6 +1,7 @@
 #include <iostream>
 #include <memory>
 
+
 #include "../include/texture.hh"
 
 unsigned int Texture::globalzlevel = 0;
@@ -11,7 +12,8 @@ Texture::Texture()
     : Width(0), Height(0), Internal_Format(GL_RGB), Image_Format(GL_RGB), Wrap_S(GL_REPEAT),
       Wrap_T(GL_REPEAT), Filter_Min(GL_LINEAR), Filter_Max(GL_LINEAR), tint(glm::vec3(1.0f, 1.0f, 1.0f)),
       size(glm::vec2(140.0f, 190.0f)), position(glm::vec2(0.0f, 0.0f)), angle(0),
-      translation(glm::mat4(1.0f)), isClicked(false), isDraggable(true), zlevel(globalzlevel++)
+      translation(glm::mat4(1.0f)), isClicked(false), isDraggable(true), zlevel(globalzlevel++),
+      clicks(0), lastClickPos(position), lastClickTime(glfwGetTime())
 {
     glGenTextures(1, &this->ID);
 }
@@ -34,7 +36,7 @@ void Texture::Generate(unsigned int width, unsigned int height, unsigned char* d
 
 void Texture::Bind() const
 {
-    glBindTexture(GL_TEXTURE_2D, this->ID);
+    glBindTexture(GL_TEXTURE_2D, ID);
 }
 
 void Texture::updateTranslation()
@@ -69,11 +71,27 @@ void Texture::move(glm::vec2 newPosition)
     position = newPosition;
 }
 
-void Texture::onClick(glm::vec2 position)
+void Texture::resize(glm::vec2 factor)
 {
+    size *= factor;
+}
+
+bool Texture::onClick(glm::vec2 position)
+{
+    // std::cout << "hi\n";
     isClicked = true;
-    zlevel = globalzlevel++;
-    // TODO: update draw order based on level, make zlevels not just mindlessly increase?
+    zlevel = ++globalzlevel;
+
+    if (++clicks > 1)
+    {
+        clicks = 0;
+        return true;
+    }
+    lastClickTime = glfwGetTime();
+    lastClickPos = position;
+
+    return false;
+    // TODO (idea): update draw order based on level, make zlevels not just mindlessly increase?
 }
 
 void Texture::onHold(glm::vec2 position)
@@ -97,8 +115,8 @@ bool Texture::contains(std::pair<double, double> position, bool drag)
 {
     unsigned int CLOSE_ENOUGH = drag ? CLOSE_ENOUGH_DRAG : CLOSE_ENOUGH_CLICK;
 
-    return (position.first + CLOSE_ENOUGH >= this->position.x && position.first <= this->position.x + this->size.x)
-     && (position.second + CLOSE_ENOUGH >= this->position.y && position.second <= this->position.y + this->size.y);
+    return (position.first + CLOSE_ENOUGH >= this->position.x && position.first <= this->position.x + this->size.x + CLOSE_ENOUGH)
+     && (position.second + CLOSE_ENOUGH >= this->position.y && position.second <= this->position.y + this->size.y + CLOSE_ENOUGH);
 }
 
 bool Texture::contains(std::pair<double, double> position)

@@ -96,7 +96,6 @@ Texture ResourceManager::_loadTextureFromFile(const char *file, bool alpha)
         texture.Image_Format = GL_RGBA;
     }
     // load image
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     int width, height, nrChannels;
     unsigned char* data = stbi_load(file, &width, &height, &nrChannels, 0);
     // now generate texture
