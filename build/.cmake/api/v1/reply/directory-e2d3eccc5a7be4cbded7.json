@@ -1,0 +1,45 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"/home/obie/Apps/GLFW/glfw-3.3.9/src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 190,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/home/obie/Apps/GLFW/glfw-3.3.9-build/src/libglfw3.a"
+			],
+			"targetId" : "glfw::@96b6ee470f569c5bf018",
+			"targetIndex" : 3,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+		"source" : "/home/obie/Apps/GLFW/glfw-3.3.9/src"
+	}
+}

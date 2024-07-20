@@ -1,0 +1,141 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"/home/obie/Apps/FreeType/freetype-2.13.2/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 561,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 569,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 623,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 634,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 642,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 647,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "headers",
+			"destination" : "include/freetype2",
+			"paths" : 
+			[
+				{
+					"from" : "/home/obie/Apps/FreeType/freetype-2.13.2/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "headers",
+			"destination" : "include/freetype2/freetype/config",
+			"paths" : 
+			[
+				"/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config/ftconfig.h",
+				"/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config/ftoption.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "pkgconfig",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"/home/obie/Apps/FreeType/freetype-2.13.2-build/freetype2.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/home/obie/Apps/FreeType/freetype-2.13.2-build/libfreetype.a"
+			],
+			"targetId" : "freetype::@84ed2750586d80fa10b8",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "headers",
+			"destination" : "lib/cmake/freetype",
+			"exportName" : "freetype-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "freetype::@84ed2750586d80fa10b8",
+					"index" : 2
+				},
+				{
+					"id" : "freetype-interface::@84ed2750586d80fa10b8",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/Export/lib/cmake/freetype/freetype-config.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "headers",
+			"destination" : "lib/cmake/freetype",
+			"paths" : 
+			[
+				"/home/obie/Apps/FreeType/freetype-2.13.2-build/freetype-config-version.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+		"source" : "/home/obie/Apps/FreeType/freetype-2.13.2"
+	}
+}

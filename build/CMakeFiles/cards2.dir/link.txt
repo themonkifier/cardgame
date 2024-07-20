@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/cards2.dir/run1.cc.o CMakeFiles/cards2.dir/home/obie/Apps/glad/src/glad.c.o -o cards2 

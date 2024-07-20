@@ -1,0 +1,440 @@
+[
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/run.cc.o -c /home/obie/Documents/cards/cardgame/run.cc",
+  "file": "/home/obie/Documents/cards/cardgame/run.cc",
+  "output": "CMakeFiles/cards.dir/run.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/gcc  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/home/obie/Apps/glad/src/glad.c.o -c /home/obie/Apps/glad/src/glad.c",
+  "file": "/home/obie/Apps/glad/src/glad.c",
+  "output": "CMakeFiles/cards.dir/home/obie/Apps/glad/src/glad.c.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/card.cc.o -c /home/obie/Documents/cards/cardgame/src/card.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/card.cc",
+  "output": "CMakeFiles/cards.dir/src/card.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/client.cc.o -c /home/obie/Documents/cards/cardgame/src/client.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/client.cc",
+  "output": "CMakeFiles/cards.dir/src/client.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/deck.cc.o -c /home/obie/Documents/cards/cardgame/src/deck.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/deck.cc",
+  "output": "CMakeFiles/cards.dir/src/deck.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/game.cc.o -c /home/obie/Documents/cards/cardgame/src/game.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/game.cc",
+  "output": "CMakeFiles/cards.dir/src/game.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/multiplayer.cc.o -c /home/obie/Documents/cards/cardgame/src/multiplayer.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/multiplayer.cc",
+  "output": "CMakeFiles/cards.dir/src/multiplayer.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/pile.cc.o -c /home/obie/Documents/cards/cardgame/src/pile.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/pile.cc",
+  "output": "CMakeFiles/cards.dir/src/pile.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/renderer.cc.o -c /home/obie/Documents/cards/cardgame/src/renderer.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/renderer.cc",
+  "output": "CMakeFiles/cards.dir/src/renderer.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/resource_manager.cc.o -c /home/obie/Documents/cards/cardgame/src/resource_manager.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/resource_manager.cc",
+  "output": "CMakeFiles/cards.dir/src/resource_manager.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/server.cc.o -c /home/obie/Documents/cards/cardgame/src/server.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/server.cc",
+  "output": "CMakeFiles/cards.dir/src/server.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/shader.cc.o -c /home/obie/Documents/cards/cardgame/src/shader.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/shader.cc",
+  "output": "CMakeFiles/cards.dir/src/shader.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/text_box.cc.o -c /home/obie/Documents/cards/cardgame/src/text_box.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/text_box.cc",
+  "output": "CMakeFiles/cards.dir/src/text_box.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/text_renderer.cc.o -c /home/obie/Documents/cards/cardgame/src/text_renderer.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/text_renderer.cc",
+  "output": "CMakeFiles/cards.dir/src/text_renderer.cc.o"
+},
+{
+  "directory": "/home/obie/Documents/cards/cardgame/build",
+  "command": "/usr/bin/g++  -I/home/obie/Apps/glad/include -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -g -Wall -Wextra -Wpedantic -std=c++20 -o CMakeFiles/cards.dir/src/texture.cc.o -c /home/obie/Documents/cards/cardgame/src/texture.cc",
+  "file": "/home/obie/Documents/cards/cardgame/src/texture.cc",
+  "output": "CMakeFiles/cards.dir/src/texture.cc.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/context.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/context.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/context.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/init.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/init.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/init.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/init.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/input.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/input.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/input.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/input.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/monitor.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/monitor.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/monitor.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/monitor.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/vulkan.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/vulkan.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/vulkan.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/vulkan.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/window.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/window.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/window.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/window.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_init.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/x11_init.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/x11_init.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/x11_init.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/x11_monitor.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/x11_monitor.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/x11_monitor.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/x11_window.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/x11_window.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/x11_window.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/x11_window.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/xkb_unicode.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/xkb_unicode.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/xkb_unicode.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_time.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/posix_time.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/posix_time.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/posix_time.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/posix_thread.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/posix_thread.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/glx_context.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/glx_context.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/glx_context.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/glx_context.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/egl_context.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/egl_context.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/egl_context.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/egl_context.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/osmesa_context.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/osmesa_context.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+},
+{
+  "directory": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src",
+  "command": "/usr/bin/gcc -D_GLFW_USE_CONFIG_H -I/home/obie/Apps/GLFW/glfw-3.3.9/include -I/home/obie/Apps/GLFW/glfw-3.3.9/src -I/home/obie/Apps/GLFW/glfw-3.3.9-build/src -g -std=gnu99 -fPIC -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o -c /home/obie/Apps/GLFW/glfw-3.3.9/src/linux_joystick.c",
+  "file": "/home/obie/Apps/GLFW/glfw-3.3.9/src/linux_joystick.c",
+  "output": "/home/obie/Apps/GLFW/glfw-3.3.9-build/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/autofit/autofit.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/autofit/autofit.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/autofit/autofit.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/autofit/autofit.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftbase.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbase.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbase.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftbase.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftbbox.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbbox.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbbox.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftbbox.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftbdf.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbdf.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbdf.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftbdf.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftbitmap.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbitmap.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftbitmap.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftcid.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftcid.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftcid.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftcid.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftfstype.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftfstype.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftfstype.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftfstype.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftgasp.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftgasp.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftgasp.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftgasp.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftglyph.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftglyph.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftglyph.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftglyph.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftgxval.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftgxval.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftgxval.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftgxval.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftinit.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftinit.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftinit.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftinit.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftmm.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftmm.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftmm.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftmm.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftotval.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftotval.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftotval.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftotval.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftpatent.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftpatent.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftpatent.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftpatent.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftpfr.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftpfr.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftpfr.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftpfr.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftstroke.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftstroke.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftstroke.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftstroke.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftsynth.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftsynth.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftsynth.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftsynth.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/fttype1.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/fttype1.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/fttype1.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/fttype1.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftwinfnt.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftwinfnt.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/bdf/bdf.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/bdf/bdf.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/bdf/bdf.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/bdf/bdf.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/bzip2/ftbzip2.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/bzip2/ftbzip2.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/cache/ftcache.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/cache/ftcache.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/cache/ftcache.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/cache/ftcache.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/cff/cff.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/cff/cff.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/cff/cff.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/cff/cff.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/cid/type1cid.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/cid/type1cid.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/cid/type1cid.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/cid/type1cid.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/gzip/ftgzip.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/gzip/ftgzip.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/lzw/ftlzw.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/lzw/ftlzw.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/pcf/pcf.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/pcf/pcf.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/pcf/pcf.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/pcf/pcf.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/pfr/pfr.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/pfr/pfr.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/pfr/pfr.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/pfr/pfr.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/psaux/psaux.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/psaux/psaux.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/psaux/psaux.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/psaux/psaux.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/pshinter/pshinter.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/pshinter/pshinter.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/psnames/psnames.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/psnames/psnames.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/psnames/psnames.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/psnames/psnames.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/raster/raster.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/raster/raster.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/raster/raster.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/raster/raster.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/sdf/sdf.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/sdf/sdf.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/sdf/sdf.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/sdf/sdf.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/sfnt/sfnt.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/sfnt/sfnt.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/smooth/smooth.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/smooth/smooth.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/smooth/smooth.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/smooth/smooth.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/svg/svg.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/svg/svg.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/svg/svg.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/svg/svg.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/truetype/truetype.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/truetype/truetype.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/truetype/truetype.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/truetype/truetype.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/type1/type1.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/type1/type1.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/type1/type1.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/type1/type1.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/type42/type42.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/type42/type42.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/type42/type42.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/type42/type42.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/winfonts/winfnt.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/winfonts/winfnt.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/builds/unix/ftsystem.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/builds/unix/ftsystem.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o"
+},
+{
+  "directory": "/home/obie/Apps/FreeType/freetype-2.13.2-build",
+  "command": "/usr/bin/gcc -DFT2_BUILD_LIBRARY -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include -I/home/obie/Apps/FreeType/freetype-2.13.2/include -I/home/obie/Apps/FreeType/freetype-2.13.2-build/include/freetype/config -g -fvisibility=hidden -o CMakeFiles/freetype.dir/src/base/ftdebug.c.o -c /home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftdebug.c",
+  "file": "/home/obie/Apps/FreeType/freetype-2.13.2/src/base/ftdebug.c",
+  "output": "/home/obie/Apps/FreeType/freetype-2.13.2-build/CMakeFiles/freetype.dir/src/base/ftdebug.c.o"
+}
+]

@@ -1,0 +1,5 @@
+piles with non draggable cards
+piles with only one visible card - how do we decide the position? top card's position?
+local multiplayer
+global multiplayer
+open cards from folder (with info.txt)
